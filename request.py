@@ -1,10 +1,12 @@
-import requests, json
+import requests, json, random
 
 def function():
     url = requests.get('https://cat-fact.herokuapp.com/facts')
 
     cat_dict = url.json()
 
-    print(cat_dict['all'][1]['text'])
+    cat = random.randint(1, 100)
+
+    print(cat_dict['all'][cat]['text'])
 
 function()
