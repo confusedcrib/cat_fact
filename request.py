@@ -5,8 +5,8 @@ def function():
 
     cat_dict = url.json()
 
-    cat = random.randint(1, 100)
+    cat = random.randint(1, 3)
 
-    print(cat_dict['all'][cat]['text'])
+    print(cat_dict[cat]['text'])
 
 function()
